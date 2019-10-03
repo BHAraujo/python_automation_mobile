@@ -1,2 +1,9 @@
 # python_automation_mobile
-Automation Mobile utilizando Python, Appiumm, Pyhamcrest, Page Object and BDD.
+Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
+
+
+### Configuration Environment ###
+
+## Java ##
+
+*1 - Download Java*
