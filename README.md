@@ -45,7 +45,7 @@ Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
 *1 - Download project*<br>
     **Url:** https://github.com/BHAraujo/python_automation_mobile
 
-*2 - Install Python > 3.5*<br>
+*2 - Install Python => 3.5*<br>
     Url: https://www.python.org/downloads/
 
 *3 - Install Client Appium*<br>
