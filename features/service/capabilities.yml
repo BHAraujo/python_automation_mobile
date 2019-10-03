@@ -1,0 +1,5 @@
+platformName: "Android"
+platformVersion: "7.1"
+automationName: "uiautomator2"
+deviceName: "Nexus_5X_API_25"
+app: "CTAppium-1-1.apk"
