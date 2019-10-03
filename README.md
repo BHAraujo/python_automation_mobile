@@ -6,20 +6,20 @@ Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
 
 ## Java ##
 
-*1 - Download Java*
+*1 - Download Java*<br>
   **URL:** https://www.java.com/pt_BR/download/
 
-*2 - Variable Environment*  
+*2 - Variable Environment*<br>  
 
   - JAVA_HOME /usr/lib/jvm/java-8-oracle    
 
 
 ## Android Studio ##
 
-*1 - Downlaod Android Studio*
+*1 - Downlaod Android Studio*<br>
    **Url:** https://developer.android.com/studio
 
-*2 - Variable Environment*
+*2 - Variable Environment*<br>
     **Terminal Command:**
       - export ANDROID_HOME=/home/<profileuser>/Android/Sdk
 
