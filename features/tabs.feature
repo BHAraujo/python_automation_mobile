@@ -1,4 +1,5 @@
 Feature: Validation Activity Tabs
+    As a user I want to tap in Tabs and validate message
 
   @tabs
   Scenario: Validation Activity Tabs

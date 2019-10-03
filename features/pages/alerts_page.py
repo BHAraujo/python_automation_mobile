@@ -15,9 +15,7 @@ class AlertsPage(BasePage):
         self.message_alert = "android:id/message"
         self.button_ok_simple_alert = "android:id/button1"
         self.restrict_alert = "//android.widget.TextView[@text='ALERTA RESTRITIVO']"
-        self.button_quit = "android:id/button1"
-
-
+        self.button_sair = "android:id/button1"
         self.confirm_alert = "//android.widget.TextView[@text='ALERTA CONFIRM']"
         self.button_ok = "android:id/button2"
 
@@ -47,12 +45,13 @@ class AlertsPage(BasePage):
         self.restrict_alert_tap = self.driver.find_element_by_xpath(self.restrict_alert)
         BasePage().tap_element(self.restrict_alert_tap)
 
-    def button_quit_tap(self):
-        BasePage().wait_element_to_be_clickable("ID", self.button_quit)
-        self.button_quit_tap = self.driver.find_element_by_id(self.button_quit)
-        BasePage().tap_element(self.button_quit_tap)
+    def button_sair_tap(self):
+        BasePage().wait_element_to_be_clickable("ID", self.button_sair)
+        self.button_sair_tap = self.driver.find_element_by_id(self.button_sair)
+        BasePage().tap_element(self.button_sair_tap)
 
     def confirm_alert_tap(self):
+        sleep(2)
         self.confirm_alert_tap = self.driver.find_element_by_xpath(self.confirm_alert)
         BasePage().tap_element(self.confirm_alert_tap)
 

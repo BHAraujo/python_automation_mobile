@@ -1,4 +1,5 @@
 Feature: Validation Activity Swipe
+  As a user I want to swipe and validate all message
 
   @swipe
   Scenario: Validation Activity Swipe

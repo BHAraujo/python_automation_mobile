@@ -1,5 +1,6 @@
 
 Feature: Validation Activity Accordion
+  As a user I want to tap all the accordion and validate yours message
 
   @accordion
   Scenario: Validation Activity Accordion

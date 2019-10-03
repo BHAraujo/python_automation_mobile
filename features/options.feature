@@ -1,4 +1,5 @@
 Feature: Validation Activity Option Successifuly
+    As a user I want to tap in the menu Option and validate message
 
     @option
     Scenario: Validation Activity Option Successfully

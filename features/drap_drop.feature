@@ -1,4 +1,5 @@
 Feature: Validation Activity Drag Drop
+    As a user I want to drag drop all elements and validate the sequece by in the end
 
   @drag
   Scenario: Validation Activity Drag Drop

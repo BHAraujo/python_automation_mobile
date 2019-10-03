@@ -1,4 +1,6 @@
 Feature: Validation Activity Swipe List
+  As a user I wanto to swipe and tap button less all elements and validation in the end
+
 
   @swipe_list
   Scenario: Validation Activity Swipe List

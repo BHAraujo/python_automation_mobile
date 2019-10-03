@@ -1,7 +1,7 @@
 Feature: Validation Activity About
+    As a user I want to access the site link available on activity about
 
-
-  @about  @skip
+  @about 
   Scenario: Validation Activity About
       Given the tap in the menu About
       When seen the image of course

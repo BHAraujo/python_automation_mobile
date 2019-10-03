@@ -1,4 +1,5 @@
 Feature: Validation Activity Clicks
+    As a user I want to tap and validate your behaviuor
 
   @clicks
   Scenario: Validation Activity Clicks

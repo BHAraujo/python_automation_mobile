@@ -32,7 +32,7 @@ def step_impl(context):
 
 @step(u'tap in the button sair')
 def step_impl(context):
-    alerts_page.button_quit_tap()
+    alerts_page.button_sair_tap()
 
 @step(u'tap int the Confirm Alert')
 def step_impl(context):

@@ -1,4 +1,5 @@
 Feature: Validation Activity Create Account
+    As i user I want to create a new user and do log in
 
    @acc
   Scenario: Validation Activity Create Account

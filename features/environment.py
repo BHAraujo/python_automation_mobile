@@ -3,9 +3,7 @@ import os
 from appium import webdriver
 from service.emulator import Emulator
 
-
 driver = Emulator().set_driver()
-
 
 def before_all(context):
     if not context.config.log_capture:

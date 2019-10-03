@@ -1,4 +1,5 @@
 Feature: Validation Activity Forms
+  As a user I want to fill and select compoments and validate in the end
 
   @forms
   Scenario: Validation Activity Forms
