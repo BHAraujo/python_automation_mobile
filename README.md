@@ -62,7 +62,7 @@ Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
     appium
 
 *2 - Emulator* <br>
-    - emualator --list-avds <br>
+    - emulator --list-avds <br>
     - emulator @<nameemulator>
 
 *3 - Run BDD*<br>
