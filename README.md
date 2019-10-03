@@ -20,7 +20,8 @@ Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
    **Url:** https://developer.android.com/studio
 
 *2 - Variable Environment*<br>
-    **Terminal Command:**
+    **Terminal Command:**<br>
+      
       - export ANDROID_HOME=/home/<profileuser>/Android/Sdk
 
       - export uiautomatorviewer=/home/<profileuser>/Android/Sdk/tools/bin/uiautomatorviewer
