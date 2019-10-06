@@ -21,7 +21,7 @@ Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
 
 *2 - Variable Environment*<br>
     **Terminal Command:**<br>
-      
+
       - export ANDROID_HOME=/home/<profileuser>/Android/Sdk
 
       - export uiautomatorviewer=/home/<profileuser>/Android/Sdk/tools/bin/uiautomatorviewer
@@ -56,6 +56,9 @@ Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
    **Terminal Command:**<br>
       - pip3 install -r requirements.txt
 
+*5 -Install  Allure Reports*
+   - URL: https://www.npmjs.com/package/allure-commandline
+
 
 # Run project #<br>
 
@@ -68,6 +71,8 @@ Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
 
 *3 - Run BDD*<br>
     - behave
+    **Reports**
+    - behave -f allure_behave.formatter:AllureFormatter -o reports *.feature
 
 
 

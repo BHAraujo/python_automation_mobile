@@ -16,3 +16,7 @@ def before_scenario(context, scenario):
     driver.launch_app()
     if "skip" in scenario.tags:
         scenario.skip("@skip")
+
+def after_all(context):
+    if context.config.userdata['allure_behave']:
+        os.system("allure serve reports")
