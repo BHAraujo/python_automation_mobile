@@ -7,16 +7,16 @@ from .base_page import BasePage
 
 class AboutPage(BasePage):
     def __init__(self):
-        self.driver = BasePage().driver
+        self.driver = driver
         self.menu_about = "//android.widget.TextView[@text='About...']"
         self.show_course = "//android.widget.TextView[@text='Veja o curso aqui']"
         self.button_notification_browser = "android:id/button_once"
 
 
     def menu_about_tap(self):
-        BasePage().wait_element_to_be_clickable(None, self.menu_about)
+        super().wait_element_to_be_clickable(None, self.menu_about)
         self.menu_about_tap = self.driver.find_element_by_xpath(self.menu_about)
-        BasePage().tap_element(self.menu_about_tap)
+        super().tap_element(self.menu_about_tap)
 
     def show_course_tap(self):
         BasePage().wait_element_to_be_clickable(None, self.show_course)
