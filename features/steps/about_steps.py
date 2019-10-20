@@ -3,11 +3,12 @@ sys.path.append('..')
 
 from behave import step
 from hamcrest import assert_that, equal_to
+from time import sleep
 
-from pages.about_page import AboutPage
+from pages.about_page import AboutPage, BasePage
 
 about_page = AboutPage()
-
+base_page = BasePage()
 
 @step(u'the tap in the menu About')
 def step_impl(context):
@@ -23,5 +24,7 @@ def step_impl(context, message):
 
 @step(u'must be open webbrowser Chrome')
 def step_impl(context):
-    assert_that('org.chromium.chrome.browser.ChromeTabbedActivity',
-                 equal_to(about_page.button_notification_browser_tap()))
+    sleep(5)
+    base_page.take_screenshot("about", "chrome.png")
+    assert_that('.WebViewBrowserActivity',
+                    equal_to(base_page.get_current_activity()))

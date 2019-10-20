@@ -12,14 +12,14 @@ class SplashPage(BasePage):
 
 
     def menu_splash_tap(self):
-        BasePage().wait_element_to_be_clickable(None, self.menu_splash)
+        super().wait_element_to_be_clickable(None, self.menu_splash)
         self.menu_splash_tap = self.driver.find_element_by_xpath(self.menu_splash)
-        BasePage().tap_element(self.menu_splash_tap)
+        super().tap_element(self.menu_splash_tap)
 
     def message_splash_text(self):
-        BasePage().wait_element_to_be_clickable(None, self.message_splash)
+        super().wait_element_to_be_clickable(None, self.message_splash)
         self.message_splash_text = self.driver.find_element_by_xpath(self.message_splash)
-        BasePage().tap_element(self.message_splash_text)
+        super().tap_element(self.message_splash_text)
 
     def wait_message_splash(self):
-        BasePage().wait_element_to_be_clickable(None, self.message_splash)
+        super().wait_element_to_be_clickable(None, self.message_splash)

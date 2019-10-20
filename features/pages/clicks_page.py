@@ -14,28 +14,28 @@ class ClicksPage(BasePage):
         self.btn_clear = "//android.widget.TextView[@text='Limpar']"
 
     def menu_clicks_tap(self):
-        BasePage().wait_element_to_be_clickable(None, self.menu_clicks)
+        super().wait_element_to_be_clickable(None, self.menu_clicks)
         self.menu_clicks_tap = self.driver.find_element_by_xpath(self.menu_clicks)
-        BasePage().tap_element(self.menu_clicks_tap)
+        super().tap_element(self.menu_clicks_tap)
 
     def wait_menu_click(self):
-        BasePage().wait_element_to_be_clickable(None, self.long_click)
+        super().wait_element_to_be_clickable(None, self.long_click)
 
     def long_click_tap(self):
         self.long_click_tap = self.driver.find_element_by_xpath(self.long_click)
-        BasePage().long_click_element(self.long_click_tap)
-        BasePage().take_screenshot("clicks", "long_click.png")
+        super().long_click_element(self.long_click_tap)
+        super().take_screenshot("clicks", "long_click.png")
 
     def double_click_tap(self):
         self.double_click_tap = self.driver.find_element_by_xpath(self.double_click)
-        BasePage().double_click_element(self.double_click_tap)
-        BasePage().take_screenshot("clicks", "double_click.png")
+        super().double_click_element(self.double_click_tap)
+        super().take_screenshot("clicks", "double_click.png")
 
     def lazy_double_click_tap(self):
         self.lazy_double_click_tap = self.driver.find_element_by_xpath(self.lazy_double_click)
-        BasePage().lazy_double_click_tap(self.lazy_double_click_tap)
-        BasePage().take_screenshot("clicks", "lazy_double_click.png")
+        super().lazy_double_click_tap(self.lazy_double_click_tap)
+        super().take_screenshot("clicks", "lazy_double_click.png")
 
     def btn_clear_tap(self):
         self.btn_clear_tap = self.driver.find_element_by_xpath(self.btn_clear)
-        BasePage().tap_element(self.btn_clear_tap)
+        super().tap_element(self.btn_clear_tap)

@@ -16,22 +16,22 @@ class SwipePage(BasePage):
 
 
     def menu_swipe_tap(self):
-        BasePage().wait_element_to_be_clickable(None, self.menu_swipe)
+        super().wait_element_to_be_clickable(None, self.menu_swipe)
         self.menu_swipe_tap = self.driver.find_element_by_xpath(self.menu_swipe)
-        BasePage().tap_element(self.menu_swipe_tap)
+        super().tap_element(self.menu_swipe_tap)
 
     def wait_menu_swipe(self):
-        BasePage().wait_visibility_of_element_located(None, self.fist_screen)
+        super().wait_visibility_of_element_located(None, self.fist_screen)
 
     def long_click_tap(self):
         self.long_click_tap = self.driver.find_element_by_xpath(self.long_click)
-        BasePage().long_click_element(self.long_click_tap)
-        BasePage().take_screenshot("clicks", "long_click.png")
+        super().long_click_element(self.long_click_tap)
+        super().take_screenshot("clicks", "long_click.png")
 
     def swipe_screen_tap(self, lista=[]):
-        BasePage().swipe_screen(lista)
+        super().swipe_screen(lista)
 
     def verify_text_in_screen(self, message):
         sleep(0.5)
-        BasePage().take_screenshot("swipe", "swipe.png")
+        super().take_screenshot("swipe", "swipe.png")
         return message in self.driver.page_source

@@ -13,16 +13,16 @@ class TabsPage(BasePage):
         self.message_tab_second = "//android.widget.TextView[@text='Este é o conteúdo da Aba 2']"
 
     def menu_tabs_tap(self):
-        BasePage().wait_element_to_be_clickable(None, self.menu_tabs)
+        super().wait_element_to_be_clickable(None, self.menu_tabs)
         self.menu_tabs_tap = self.driver.find_element_by_xpath(self.menu_tabs)
-        BasePage().tap_element(self.menu_tabs_tap)
+        super().tap_element(self.menu_tabs_tap)
 
     def wait_tabs(self):
-        BasePage().wait_element_to_be_clickable(None, self.tab_first)
-        BasePage().wait_element_to_be_clickable(None, self.tab_second)
+        super().wait_element_to_be_clickable(None, self.tab_first)
+        super().wait_element_to_be_clickable(None, self.tab_second)
 
     def tab_second_tap(self):
-        BasePage().wait_element_to_be_clickable(None, self.tab_second)
+        super().wait_element_to_be_clickable(None, self.tab_second)
         self.tab_second_tap = self.driver.find_element_by_xpath(self.tab_second)
-        BasePage().tap_element(self.tab_second_tap)
-        BasePage().wait_visibility_of_element_located(None, self.message_tab_second)
+        super().tap_element(self.tab_second_tap)
+        super().wait_visibility_of_element_located(None, self.message_tab_second)

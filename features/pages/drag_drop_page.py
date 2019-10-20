@@ -20,12 +20,12 @@ class DragDropPage(BasePage):
     def menu_drag_drop_tap(self):
         sleep(3)
         self.driver.swipe(100, 700, 100, 150)
-        BasePage().wait_element_to_be_clickable(None, self.menu_drag_drop)
+        super().wait_element_to_be_clickable(None, self.menu_drag_drop)
         self.menu_drag_drop_tap = self.driver.find_element_by_xpath(self.menu_drag_drop)
-        BasePage().tap_element(self.menu_drag_drop_tap)
+        super().tap_element(self.menu_drag_drop_tap)
 
     def wait_drag_drop(self):
-        BasePage().wait_element_to_be_clickable(None, self.this)
+        super().wait_element_to_be_clickable(None, self.this)
 
     def drag_and_drop_elements(self, firt_element, second_element):
         dict_element = {
@@ -33,7 +33,7 @@ class DragDropPage(BasePage):
                         "Drop!": self.drag, "longo": self.long_click,
                         "para": self.drag_drop, "desejado": self.wish
                          }
-        BasePage().drag_and_drop_element(self.driver.find_element_by_xpath(dict_element[firt_element.replace('"','')]),
+        super().drag_and_drop_element(self.driver.find_element_by_xpath(dict_element[firt_element.replace('"','')]),
                                           self.driver.find_element_by_xpath(dict_element[second_element.replace('"','')]))
     def take_screenshot_save(self):
-        BasePage().take_screenshot("drag_drop", "drag_drop.png")
+        super().take_screenshot("drag_drop", "drag_drop.png")

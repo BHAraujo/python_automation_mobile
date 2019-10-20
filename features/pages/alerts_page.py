@@ -20,17 +20,17 @@ class AlertsPage(BasePage):
         self.button_ok = "android:id/button2"
 
     def menu_alerts_tap(self):
-        BasePage().wait_element_to_be_clickable(None, self.menu_alerts)
+        super().wait_element_to_be_clickable(None, self.menu_alerts)
         self.menu_alerts_tap = self.driver.find_element_by_xpath(self.menu_alerts)
-        BasePage().tap_element(self.menu_alerts_tap)
+        super().tap_element(self.menu_alerts_tap)
 
     def wait_element_alert(self):
-        BasePage().wait_element_to_be_clickable(None, self.simple_alert)
+        super().wait_element_to_be_clickable(None, self.simple_alert)
 
     def simple_alerts_tap(self):
-        BasePage().wait_element_to_be_clickable(None, self.simple_alert)
+        super().wait_element_to_be_clickable(None, self.simple_alert)
         self.simple_alert_tap = self.driver.find_element_by_xpath(self.simple_alert)
-        BasePage().tap_element(self.simple_alert_tap)
+        super().tap_element(self.simple_alert_tap)
 
     def verify_alert_text(self, message):
         sleep(1.5)
@@ -38,24 +38,24 @@ class AlertsPage(BasePage):
 
     def button_ok_simple_alert_click(self):
         self.button_ok_simple_alert_click = self.driver.find_element_by_id(self.button_ok_simple_alert)
-        BasePage().tap_element(self.button_ok_simple_alert_click)
+        super().tap_element(self.button_ok_simple_alert_click)
 
     def restrict_alert_tap(self):
-        BasePage().wait_visibility_of_element_located(None, self.restrict_alert)
+        super().wait_visibility_of_element_located(None, self.restrict_alert)
         self.restrict_alert_tap = self.driver.find_element_by_xpath(self.restrict_alert)
-        BasePage().tap_element(self.restrict_alert_tap)
+        super().tap_element(self.restrict_alert_tap)
 
     def button_sair_tap(self):
-        BasePage().wait_element_to_be_clickable("ID", self.button_sair)
+        super().wait_element_to_be_clickable("ID", self.button_sair)
         self.button_sair_tap = self.driver.find_element_by_id(self.button_sair)
-        BasePage().tap_element(self.button_sair_tap)
+        super().tap_element(self.button_sair_tap)
 
     def confirm_alert_tap(self):
         sleep(2)
         self.confirm_alert_tap = self.driver.find_element_by_xpath(self.confirm_alert)
-        BasePage().tap_element(self.confirm_alert_tap)
+        super().tap_element(self.confirm_alert_tap)
 
     def button_ok_tap(self):
-        BasePage().wait_element_to_be_clickable("ID", self.button_ok)
+        super().wait_element_to_be_clickable("ID", self.button_ok)
         self.button_ok_tap = self.driver.find_element_by_id(self.button_ok)
-        BasePage().tap_element(self.button_ok_tap)
+        super().tap_element(self.button_ok_tap)

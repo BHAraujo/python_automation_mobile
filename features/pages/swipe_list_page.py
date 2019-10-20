@@ -14,16 +14,16 @@ class SwipeListPage(BasePage):
 
     def menu_swipe_list_tap(self):
         self.driver.swipe(100, 700, 100, 150)
-        BasePage().wait_element_to_be_clickable(None, self.menu_swipe_list)
+        super().wait_element_to_be_clickable(None, self.menu_swipe_list)
         self.menu_swipe_list_tap = self.driver.find_element_by_xpath(self.menu_swipe_list)
-        BasePage().tap_element(self.menu_swipe_list_tap)
+        super().tap_element(self.menu_swipe_list_tap)
 
     def wait_swipe_list(self):
-        BasePage().wait_element_to_be_clickable(None, "//android.widget.TextView[@text='Opção 1']")
+        super().wait_element_to_be_clickable(None, "//android.widget.TextView[@text='Opção 1']")
 
     def swipe_and_button_plus_tap(self):
         for index in self.height:
             self.driver.swipe(800, index, 200,0)
-            BasePage().wait_element_to_be_clickable(None, self.button_plus)
+            super().wait_element_to_be_clickable(None, self.button_plus)
             self.button_plus_tap = self.driver.find_element_by_xpath(self.button_plus)
-            BasePage().tap_element(self.button_plus_tap)
+            super().tap_element(self.button_plus_tap)
