@@ -1,3 +1,4 @@
-appium
+Appium-Python-Client
 behave
 pyhamcrest
+faker
