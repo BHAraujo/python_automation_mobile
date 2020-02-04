@@ -1,81 +1,69 @@
-# python_automation_mobile
-Automation APK with Python, Appium, Selenium, Pyhamcrest and Behave
+### Environment Configuration ###
+
+### Install ###
+
+ **Python**
+   - url: https://www.python.org/downloads/
+
+ **Pip**   
+   - url: https://pip.pypa.io/en/stable/installing/
+
+**Allure Report**
+  - url: https://docs.qameta.io/allure/#_installing_a_commandline
+
+ **Android Studio**  
+   - url: https://developer.android.com/studio
 
 
-### Configuration Environment ###
+### Configuration Project ###
 
-## Java ##
+## Created environment variable
 
-*1 - Download Java*<br>
-  **URL:** https://www.java.com/pt_BR/download/
+**Android Studio**
+  **Include variable in ~/.bash_profile** <br>
+  - export ANDROID_HOME=/Users/<userprofilehere>/Library/Android/sdk
+  - export PATH=$PATH:"$PWD":"$ANDROID_HOME/build-tools/29.0.2"
+  - export PATH=$PATH:"$PWD":"$ANDROID_HOME/platform-tools"
+  - export PATH=$PATH:/Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home
+  - export PATH=$PATH:"$PWD":"$ANDROID_HOME/emulator"
+  - export PATH=$PATH:"$PWD":"$ANDROID_HOME/tools/bin"
 
-*2 - Variable Environment*<br>  
+**Project** <br>
+   **behave.yml** <br>
+     - "environment": Environment want to execute test (dev, hml, prod)<br>
+     - "os": Operation System Mobile (Android or iOS)<br>
 
-  - JAVA_HOME /usr/lib/jvm/java-8-oracle    
-
-
-## Android Studio ##
-
-*1 - Downlaod Android Studio*<br>
-   **Url:** https://developer.android.com/studio
-
-*2 - Variable Environment*<br>
-    **Terminal Command:**<br>
-
-      - export ANDROID_HOME=/home/<profileuser>/Android/Sdk
-
-      - export uiautomatorviewer=/home/<profileuser>/Android/Sdk/tools/bin/uiautomatorviewer
-
-      - export adb=/home/<profileuser>/Android/Sdk/platform-tools/adb
-
-      - export emulator=/home/<profileuser>/Android/Sdk/tools/emulator
-
-*3 - Create Emulator*
-   - Open Android Studio
-   - Click Device Virtual Android(AVD)
-   - Create Virtual Device
-   - Select anyone device
-   - Download image, example: Nougat 7.1
-   - Next
-   - Finish  
+    *service > capabilities*
+     -  "android":
+            "platformName": "Operation System Mobile"
+            "platformVersion": "Version Operation System Mobile"
+            "udid": "Id device real"
+              - Command Line: adb devices
+                  List of devices attached
+                    0049195854	device
+            "automationName": "uiautomator2"
+            "deviceName": "Define name for device"
+            "app": "Name apk or ipa, located in folder service > binary"
 
 
-## Project ##
-
-*1 - Download project*<br>
-    **Url:** https://github.com/BHAraujo/python_automation_mobile
-
-*2 - Install Python => 3.5*<br>
-    Url: https://www.python.org/downloads/
-
-*3 - Install Client Appium*<br>
-   **Url:** http://appium.io/docs/en/about-appium/getting-started/ <br>
-    Obs: To install client Appium you must get installed Node.js
-
-*4 - Install libs*<br>
-   **Terminal Command:**<br>
+## Install Dependency ##
+   **Command Line:** <br>
       - pip3 install -r requirements.txt
 
-*5 -Install  Allure Reports*
-   - URL: https://www.npmjs.com/package/allure-commandline
+    **Create Emulator**
+       - Open Android Studio
+       - Click Device Virtual Android(AVD)
+       - Create Virtual Device
+       - Select anyone device
+       - Download image, example: Nougat 9
+       - Next
+       - Finish
 
 
-# Run project #<br>
+## Execution Project ##
+    **Allure Report**
+      - All Scenarios:
+          - `behave -f allure_behave.formatter:AllureFormatter -o reports/allure_report *.feature`
 
-*1 - Appium*<br>
-    appium
-
-*2 - Emulator* <br>
-    - emulator --list-avds <br>
-    - emulator @<nameemulator>
-
-*3 - Run BDD*<br>
-    - behave
-    **Reports**
-    - behave -f allure_behave.formatter:AllureFormatter -o reports *.feature
-
-
-
-Developer: Bruno Henrique Araujo<br>
-E-mail: lbruno.araujo@hotmail.com<br>
-Github: BHAraujo    
+      - By Tag:
+          - `behave -f allure_behave.formatter:AllureFormatter -o reports/allure_report -t @nametag`
