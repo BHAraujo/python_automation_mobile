@@ -3,16 +3,16 @@
 ### Install ###
 
  **Python**
-   - url: https://www.python.org/downloads/
+   - https://www.python.org/downloads/
 
  **Pip**   
-   - url: https://pip.pypa.io/en/stable/installing/
+   - https://pip.pypa.io/en/stable/installing/
 
 **Allure Report**
-  - url: https://docs.qameta.io/allure/#_installing_a_commandline
+  - https://docs.qameta.io/allure/#_installing_a_commandline
 
  **Android Studio**  
-   - url: https://developer.android.com/studio
+   - https://developer.android.com/studio
 
 
 ### Configuration Project ###
